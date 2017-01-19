@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const commands = require('commander');
 const TrumpBot = require('./TrumpBot');
 

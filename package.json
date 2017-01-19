@@ -1,6 +1,6 @@
 {
   "name": "maba",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "make america bot again",
   "main": "TrumpBot.js",
   "scripts": {
@@ -11,5 +11,8 @@
   "dependencies": {
     "commander": "^2.9.0",
     "speakeasy-nlp": "^0.2.2"
+  },
+  "bin": {
+    "maba":"./index.js"
   }
 }

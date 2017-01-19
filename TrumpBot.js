@@ -25,8 +25,8 @@ class TrumpBot {
     if (action && this.introductions[action]) {
       intro = this.introductions[action];
     } else {
-      let random = Math.floor(Math.random() * (this.introductions.length - 1));
-      intro = this.introductions[random];
+      let random = Math.floor(Math.random() * (Object.keys(this.introductions).length - 1));
+      intro = this.introductions[Object.keys(this.introductions)[random]];
     }
     return intro;
   }

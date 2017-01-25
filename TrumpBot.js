@@ -56,20 +56,15 @@ class TrumpBot {
   }
 
   get introductions() {
-    return {
-      'what':[`Let me tell you about ${this.subject}.`,`Oh, here comes ${this.subject} again.`],
-      'how':[`Well I'll tell you, no one is better than me on ${this.subject}. Do you honestly think crooked Hillary could beat me on ${this.subject}?`],
-      'when':[`I've got the best plans. Day one, is when. We'll get on that problem day one, and really ${this.getVerb()} it.`],
-      'why':[`This is a good country, great country. That's why we're not like china. That and ${this.subject} is why.`]
-    };
+    return require('./content/intros.js')(this);
   };
 
   get rants() {
-    return [`If you think anyone's better at ${this.subject} than me you're crazy, no matter what you ${this.getVerb()}.`];
+    return require('./content/rants.js')(this);
   }
 
   get conclusions() {
-    return [`Sad!`,`Give me a break!`,`Wrong!`,`Lazy!`,`No energy!`,`Unfair!`];
+    return require('./content/conclusions.js')(this);
   }
 }
 

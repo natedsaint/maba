@@ -22,12 +22,15 @@ class TrumpBot {
 
   getIntro(action) {
     let intro;
+    let introArray;
     if (action && this.introductions[action]) {
-      intro = this.introductions[action];
+      introArray = this.introductions[action];
     } else {
       let random = Math.floor(Math.random() * (Object.keys(this.introductions).length - 1));
-      intro = this.introductions[Object.keys(this.introductions)[random]];
+      introArray = this.introductions[Object.keys(this.introductions)[random]];
     }
+    let randomIntro = Math.floor(Math.random() * (introArray.length - 1));
+    intro = introArray[randomIntro];
     return intro;
   }
 
@@ -42,8 +45,9 @@ class TrumpBot {
   }
 
   getVerb() {
-    let random = Math.floor(Math.random() * (this.analysis.verbs.length - 1));
-    return this.analysis.verbs[random];
+    let length = (this.analysis.verbs) ? this.analysis.verbs.length : 0;
+    let random = Math.floor(Math.random() * (length - 1));
+    return (length) ? this.analysis.verbs[random] : 'doing';
   }
 
   getSubject(raw) {
@@ -52,7 +56,7 @@ class TrumpBot {
       "we":"us",
       "I":"you",
     };
-    return subjectMap[raw] || raw;
+    return subjectMap[raw] || raw || 'that';
   }
 
   get introductions() {

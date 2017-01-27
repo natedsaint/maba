@@ -47,8 +47,8 @@ class TrumpBot {
     } else if (sentiment.score < 0) {
       mood = 'angry';
     } else {
-      if (this.coinFlip) {
-	mood = 'smug';
+      if (this.coinFlip()) {
+        mood = 'smug';
       } else {
         mood = 'neutral';
       }

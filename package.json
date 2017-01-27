@@ -8,6 +8,7 @@
   },
   "author": "",
   "license": "ISC",
+  "repository": "git@github.com:natedsaint/maba.git",
   "dependencies": {
     "commander": "^2.9.0",
     "speakeasy-nlp": "^0.2.2"

@@ -10,6 +10,6 @@ if (!commands.args || commands.args.length === 0) {
   process.exit();
 } else {
   const bot = new TrumpBot();
-  const response = bot.ask(commands.args[0]);
+  const response = bot.ask(commands.args[0]).response;
   console.log(response);
 }

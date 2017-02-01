@@ -1,5 +1,5 @@
 # maba
-Make America Bot Again
+Make America Bot Again - the really stupid bot behind [https://trump-talk.com/](Trump-talk.com)
 
 ## usage
 If you want to just play with the command-line, you can do the following.

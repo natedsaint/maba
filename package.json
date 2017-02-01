@@ -1,6 +1,6 @@
 {
   "name": "maba",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "make america bot again",
   "main": "TrumpBot.js",
   "scripts": {
